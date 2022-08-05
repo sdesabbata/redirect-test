@@ -1,11 +1,21 @@
 <!--
 Adapted from https://stackoverflow.com/questions/40456048/random-html-page-redirect
 Stack Exchange user contributions licensed under CC BY-SA
+and
+https://www.w3schools.com/js/js_output.asp
 -->
 
 <html>
 
 <head>
+
+</head>
+
+<body>
+
+<h1>Redirecting to page</h1>
+
+<p id="surveylink"></p>
 
 <script>
 	// URL list
@@ -19,16 +29,8 @@ Stack Exchange user contributions licensed under CC BY-SA
 	var randNum = Math.floor(Math.random() * 3) + 1;
 
 	// Redirect
-	window.open(randURLs[randNum]);
+	document.getElementById("surveylink").innerHTML = "please click <a href=\"" + randURLs[randNum] + "\">here</a> to continue to the survey.";
 </script>
-
-</head>
-
-<body>
-
-<h1>Redirecting to page</h1>
-
-You will now be redirect to one of three possible pages. Please allow redirect from this page if currently blocked by your browser.
 
 </body>
 
